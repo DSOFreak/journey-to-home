@@ -4,10 +4,10 @@
 chsh -s (which fish)
 
 
-oh-my-fish-installer --path=$HOME/.local/share/omf --config=$HOME/.config/omf
+fish oh-my-fish-installer --path=$HOME/.local/share/omf --config=$HOME/.config/omf
 
 omf install ultrafish
 
 sudo snap install lsd
 
-cp -r home/* $HOME 
+cp -r home/.* $HOME 

@@ -6,9 +6,11 @@
 # PS1='${debian_chroot:+($debian_chroot)}\h:\w\$ '
 # umask 022
 
-
-if [ -e ~/oh-my-posh/themes/agnoster.omp.json ] ; then
-	eval "$(oh-my-posh init bash --config ~/oh-my-posh/themes/agnoster.omp.json)"
+if [ ! -e ~/.config/oh-my-posh/themes/slimfat.omp.json ] ; then
+  wget https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/slimfat.omp.json -O ~/.config/oh-my-posh/themes/slimfat.omp.json
+fi
+if [ ! -e ~/.config/oh-my-posh/themes/slimfat.omp.json ] ; then
+  eval "$(oh-my-posh init bash --config ~/oh-my-posh/themes/slimfat.omp.json)"
 fi
 
 
@@ -133,19 +135,4 @@ mkpath() {
     mkdir -p $d
   done
 }
-
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/netmodule.intranet/mueller/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/home/netmodule.intranet/mueller/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/netmodule.intranet/mueller/miniconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/home/netmodule.intranet/mueller/miniconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
 
