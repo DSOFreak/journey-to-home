@@ -1,0 +1,25 @@
+[color]
+	ui = auto
+[user]
+	name = Lucien Mueller
+	email = lucien.mueller@netmodule.com
+[diff]
+	    tool = meld
+[difftool]
+	    prompt = false
+[difftool "meld"]
+	    cmd = meld "$LOCAL" "$REMOTE"
+[mergetool "meld"]
+	    cmd = meld "$LOCAL" "$MERGED" "$REMOTE" --output "$MERGED"
+[alias]
+	lg1 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
+	lg2 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all
+	lg = !"git lg1"
+[core]
+	editor = vi
+[merge]
+	tool = meld
+[safe]
+	directory = /data/projects/quectel-build
+[push]
+	autoSetupRemote = true
