@@ -1,0 +1,12 @@
+pane	0	1	:fish	1	:*	1	:/data/projects/build	1	ssh	:ssh lxbuild4
+pane	3	1	:fish	1	:##*	1	:/home/netmodule.intranet/mueller	0	fish	:
+pane	3	1	:fish	1	:##*	2	:/data/projects/nitroc-sim	1	fish	:
+pane	5	1	:fish	1	:*	1	:/data/projects/nitroc-sim	1	fish	:
+pane	7	1	:git	1	:*	1	:/home/netmodule.intranet/mueller/nitroc-sim/nitroc-sim.git	1	bash	:bash
+pane	7	2	:docker	0	:-	1	:/data/projects/zephyr-workspace	1	docker	:docker run -ti -v /data/projects/zephyr-workspace:/workdir docker.io/zephyrprojectrtos/ci:v0.26.7
+window	0	1	1	:*	cafe,120x29,0,0,1
+window	3	1	1	:##*	24f6,236x68,0,0[236x34,0,0,9,236x33,0,35,10]
+window	5	1	1	:*	6961,236x68,0,0,12
+window	7	1	1	:*	d265,236x68,0,0,8
+window	7	2	0	:-	6962,236x68,0,0,13
+state	0	
